@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+
 }
 
-.container {
+.home-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr .5fr 1fr;
@@ -59,4 +61,16 @@
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+}
+
+.home {
+  outline: transparent;
+  color: black;
+
+  &:hover {
+    transition: all .4s;
+    transform: scale(1.01);
+    outline: 1px solid black;
+    color: green;
+  }
 }
