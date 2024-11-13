@@ -82,21 +82,95 @@ body {
 
 /* ABOUT PAGE */
 
-/* NAVBAR AND FOOTER */
 
-.section {
-  height: 100vh;
-  width: 100%;
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5rem;
+
+}
+
+.about-font {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-subsection {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.subsection-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.subsection-header , .subsection-status {
+  margin-bottom: 10px;
+}
+
+.subsection-logo > img {
+  width: 15px;
+}
+
+.subsection-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.subsection-logo , .subsection-status, .subsection-date {
+  font-size: 14px;
+}
+
+.subsection-status {
+  padding: 4px 15px;
+  border-radius: 20px;
+}
+
+.modal {
+  margin: auto;
+}
+
+
+
+
+/* NAVBAR, FOOTER AND CONTAINER */
+
+.container {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 3vw 5vw 3vw 5vw;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  background-color: antiquewhite;
+  padding: 2rem;
 }
 
 .hidden {
   display: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  list-style-type: none;
+}
+
+.dropdown-menu li a {
+  color: black;
 }
