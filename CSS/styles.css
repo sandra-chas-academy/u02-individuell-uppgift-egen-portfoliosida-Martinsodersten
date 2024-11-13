@@ -19,6 +19,7 @@ body {
   margin: 4px;
   height: 100vh;
   width: 100%;
+  background-color: rgba(34, 34, 34, 0.849);
 }
 
 .about {
@@ -71,12 +72,14 @@ body {
   outline: transparent;
   color: black;
   font-size: 5vw; /* Scales the text size */
+  border-radius: 3px;
 
   &:hover {
-    transition: all .3s;
+    transition: all .4s;
     transform: scale(1.01);
-    outline: 1px solid black;
-    color: green;
+    outline: 3px solid rgb(1, 255, 22);
+    color: rgba(255, 255, 255, 0.603);
+    background-color: rgba(0, 0, 0, 0.315);
   }
 }
 
