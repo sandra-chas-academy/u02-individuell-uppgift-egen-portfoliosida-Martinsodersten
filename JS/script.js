@@ -11,7 +11,6 @@ toggleButton.addEventListener("click", () => {
 });
 
 // MODALS
-
 openModals.forEach((button, index) => {
   button.addEventListener("click", () => {
     modals[index].showModal();
@@ -24,23 +23,37 @@ closeModals.forEach((button, index) => {
   });
 });
 
-// JSON FETCH
+// Json fetch and display
 fetch("../data.json")
-  .then(response => {
-    if(!response.ok) {
-      throw new Error ("Error")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Error");
     }
     return response.json();
   })
-  .then(data => {
-    const aboutSections = document.querySelectorAll(".about-subsection")
+  .then((data) => {
+    const aboutSections = document.querySelectorAll(".about-subsection");
 
     aboutSections.forEach((section, index) => {
-      if(data[index]) {
+      if (data[index]) {
         section.querySelector(".title").innerText = data[index].title;
-        section.querySelector(".company").textContent = data[index].company;
-        section.querySelector(".location").innertext = data[index].location;
+        section.querySelector(".company").innerText = data[index].company;
+        section.querySelector(".location").innerText = data[index].location;
+        section.querySelector(".date").innerText = data[index].date;
       }
-    })
+    });
   })
-  .catch(error => console.error("Error loading JSON:", error));
+  .catch((error) => console.error("Error loading JSON:", error));
+
+const username = "Martinsodersten";
+
+// Funktion för att hämta repos från GitHub
+// fetch(`https://api.github.com/users/${username}/repos`).then((response) => {
+//   if (!response.ok) {
+//     throw new Error("Network response was not ok");
+//   }
+//   return response.json();
+// })
+//  .then((data) => {
+//   console.log(data);
+//  })

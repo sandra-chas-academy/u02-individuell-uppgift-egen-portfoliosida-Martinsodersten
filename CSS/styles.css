@@ -7,7 +7,7 @@
 }
 
 body {
-  
+  background-color: var(--primary-color);
 }
 
 /* HOME PAGE */
@@ -48,7 +48,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-color: rgba(131, 201, 50, 0.74);
+  background-color: var(--blue-color);
 }
 
 .projects {
@@ -71,14 +71,14 @@ body {
 
 .home {
   outline: transparent;
-  color: black;
+  color: var(--text-color);
   font-size: 5vw; /* Scales the text size */
   border-radius: 3px;
 
   &:hover {
     transition: all .4s;
     transform: scale(1.01);
-    outline: 3px solid rgb(1, 255, 22);
+    outline: 2px solid var(--secondary-color);
     color: rgba(255, 255, 255, 0.603);
     background-color: rgba(0, 0, 0, 0.315);
   }
@@ -104,13 +104,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
 }
 
 .about-subsection {
   display: flex;
   justify-content: space-between;
   padding-bottom: 25px;
-  
+  border: 2px  solid var(--secondary-color);
 }
 
 .subsection-right {
@@ -158,13 +159,22 @@ body {
   flex-direction: column;
   justify-content: space-between;
   margin: 3vw 5vw 3vw 5vw;
+  background-color: #222831;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: antiquewhite;
+  background-color: var(--secondary-color);
   padding: 2rem;
+  border-radius: 5px;
+}
+
+.dropdown-toggle {
+  background-color: var(--blue-color);
+  border: none;
+  padding: 1vw 2vw;
+  border-radius: 5px;
 }
 
 .hidden {
@@ -174,6 +184,7 @@ body {
 .dropdown-menu {
   position: absolute;
   list-style-type: none;
+  padding: 1vw;
 }
 
 .dropdown-menu li a {
