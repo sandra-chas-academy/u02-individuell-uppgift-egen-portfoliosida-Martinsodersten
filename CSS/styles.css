@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-
 }
 
 body {
@@ -14,13 +13,13 @@ body {
 
 .home-page {
   display: grid;
-  grid-template-columns: 1fr .5fr 1fr;
-  grid-template-rows: 1fr .5fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
   gap: 10px;
-  margin: 4px;
   height: 100vh;
   width: 100%;
-  background-color: rgba(34, 34, 34, 0.849);
+  margin: 1rem;
+  background-color: var(--background-dark);
 }
 
 .about {
@@ -48,7 +47,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-color: var(--blue-color);
+  background-color: var(--background-dark);
 }
 
 .projects {
@@ -73,88 +72,178 @@ body {
   outline: transparent;
   color: var(--text-color);
   font-size: 5vw; /* Scales the text size */
-  border-radius: 3px;
+  border-radius: 8px;
+  font-family: "Koulen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    transition: all .4s;
-    transform: scale(1.01);
-    outline: 2px solid var(--secondary-color);
+    transition: all 0.4s;
+    transform: scale (var(--hover-scale));
+    outline: 2px solid var(--primary-color);
     color: rgba(255, 255, 255, 0.603);
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: var(--secondary-color);
   }
+}
+
+.home img {
+  border-radius: 8px;
+  width: 
+}
+
+.about,
+.work,
+.center,
+.projects,
+.connect {
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(58, 66, 77, 0.801),
+    rgba(31, 41, 55, 0.8)
+  );
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ABOUT PAGE */
 
-
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  padding: 2vw;
   padding-top: 5rem;
-
 }
 
 .about-font {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-color);
-
+  margin-bottom: 2rem;
 }
 
 .about-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
 }
 
 .about-subsection {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 25px;
-  border: 2px  solid var(--secondary-color);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(75, 85, 99, 0.8),
+    rgba(31, 41, 55, 0.8)
+  );
+  border: 2px solid var(--primary-color);
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.about-subsection:hover {
+  transform: scale(var(--hover-scale));
+  background-color: var(--primary-color);
+}
+
+.subsection-left,
 .subsection-right {
   display: flex;
   flex-direction: column;
-  align-items: end;
 }
 
-.subsection-header , .subsection-status {
+.subsection-header {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
   margin-bottom: 10px;
 }
 
 .subsection-logo > img {
-  width: 15px;
-  
+  width: 20px;
+  margin-left: 8px;
 }
 
 .subsection-info {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
 }
 
-
-.subsection-logo , .subsection-status, .subsection-date {
+.subsection-logo {
+  display: flex;
+  align-items: center;
   font-size: 14px;
+  color: var(--text-color);
 }
-
 .subsection-status {
   padding: 4px 15px;
+  background-color: var(--secondary-color);
+  color: var(--background-dark);
   border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
 }
 
+.subsection-date {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.modal-wrapper {
+  position: relative;
+}
 .modal {
   margin: auto;
 }
 
+.open-modal {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.open-modal:hover {
+  background-color: var(--secondary-color);
+}
 
+.modal {
+  background: var(--background-dark);
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+}
+
+.close-modal {
+  background-color: rgba(255, 0, 0, 0.589);
+  color: var(--text-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+  background-color: var(--primary-color);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--background-dark);
+}
 
 /* NAVBAR, FOOTER AND CONTAINER */
 
@@ -170,16 +259,24 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--secondary-color);
-  padding: 2rem;
-  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-toggle {
-  background-color: var(--blue-color);
+  background-color: transparent;
+  color: var(--text-color);
   border: none;
-  padding: 1vw 2vw;
-  border-radius: 5px;
+  font-size: 3vh;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--secondary-color);
+  }
 }
 
 .hidden {
@@ -188,18 +285,30 @@ body {
 
 .dropdown-menu {
   position: absolute;
+  background-color: var(--background-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 10px;
   list-style-type: none;
-  padding: 1vw;
 }
 
 .dropdown-menu li a {
-  color: black;
+  font-size: 2vh;
+  color: var(--text-color);
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 4px;
+  }
 }
 
+.dropdown-menu li {
+  margin-top: 2vh;
+}
 
 /* PROJECTS PAGE */
 
-.projects-content{
+.projects-content {
   width: 100%;
   height: auto;
 }
@@ -218,7 +327,7 @@ body {
   flex-direction: column;
   border: 1px solid var(--secondary-color);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   gap: 3vh;
 }
 .repo-title {
