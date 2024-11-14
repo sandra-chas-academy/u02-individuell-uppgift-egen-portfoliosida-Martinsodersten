@@ -199,12 +199,27 @@ body {
 
 /* PROJECTS PAGE */
 
+.projects-content{
+  width: 100%;
+  height: auto;
+}
+
+.repo-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+}
+
 .repo-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--secondary-color);
-  padding: 1rem;
-  margin: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  gap: 3vh;
 }
 .repo-title {
   font-size: 1.2rem;
