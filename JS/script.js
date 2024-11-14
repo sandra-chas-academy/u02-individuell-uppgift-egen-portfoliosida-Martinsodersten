@@ -23,3 +23,24 @@ closeModals.forEach((button, index) => {
     modals[index].close();
   });
 });
+
+// JSON FETCH
+fetch("../data.json")
+  .then(response => {
+    if(!response.ok) {
+      throw new Error ("Error")
+    }
+    return response.json();
+  })
+  .then(data => {
+    const aboutSections = document.querySelectorAll(".about-subsection")
+
+    aboutSections.forEach((section, index) => {
+      if(data[index]) {
+        section.querySelector(".title").innerText = data[index].title;
+        section.querySelector(".company").textContent = data[index].company;
+        section.querySelector(".location").innertext = data[index].location;
+      }
+    })
+  })
+  .catch(error => console.error("Error loading JSON:", error));
