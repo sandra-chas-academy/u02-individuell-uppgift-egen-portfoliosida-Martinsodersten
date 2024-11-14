@@ -5,6 +5,7 @@ const dropdownMenuList = document.querySelector(".dropdown-menu");
 const openModals = document.querySelectorAll(".open-modal");
 const closeModals = document.querySelectorAll(".close-modal");
 const modals = document.querySelectorAll(".modal");
+const repoContainer = document.getElementById("repoContainer");
 
 toggleButton.addEventListener("click", () => {
   dropdownMenuList.classList.toggle("hidden");
@@ -47,13 +48,37 @@ fetch("../data.json")
 
 const username = "Martinsodersten";
 
-// Funktion för att hämta repos från GitHub
-// fetch(`https://api.github.com/users/${username}/repos`).then((response) => {
-//   if (!response.ok) {
-//     throw new Error("Network response was not ok");
-//   }
-//   return response.json();
-// })
-//  .then((data) => {
-//   console.log(data);
-//  })
+// Fetching public repos github
+fetch(`https://api.github.com/users/${username}/repos`)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((repos) => {
+    repos.forEach((repo) => {
+      const repoCard = document.createElement("div");
+      repoCard.classList.add("repo-card");
+
+      const title = document.createElement("h2");
+      title.classList.add("repo-title");
+      title.innerText = repo.name;
+
+      const description = document.createElement("p");
+      description.classList.add("repo-description");
+      description.innerText = repo.description || "No description available";
+
+      const link = document.createElement("a");
+      link.href = repo.html_url;
+      link.target = "_blank";
+      link.innerText = "View repository";
+
+      repoCard.appendChild(title);
+      repoCard.appendChild(description);
+      repoCard.appendChild(link);
+
+      repoContainer.appendChild(repoCard);
+    });
+  })
+  .catch((error) => console.error("Error fetching repositories:", error));

@@ -98,6 +98,8 @@ body {
 .about-font {
   font-size: 25px;
   font-weight: 700;
+  color: var(--text-color);
+
 }
 
 .about-section {
@@ -112,6 +114,8 @@ body {
   justify-content: space-between;
   padding-bottom: 25px;
   border: 2px  solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 .subsection-right {
@@ -126,6 +130,7 @@ body {
 
 .subsection-logo > img {
   width: 15px;
+  
 }
 
 .subsection-info {
@@ -189,4 +194,23 @@ body {
 
 .dropdown-menu li a {
   color: black;
+}
+
+
+/* PROJECTS PAGE */
+
+.repo-card {
+  border: 1px solid var(--secondary-color);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.repo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.repo-description {
+  color: var(--text-color);
 }
