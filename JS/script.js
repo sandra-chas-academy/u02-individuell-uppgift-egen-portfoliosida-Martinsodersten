@@ -67,9 +67,9 @@ fetch(`https://api.github.com/users/${username}/repos`)
 
       const description = document.createElement("p");
       description.classList.add("repo-description");
-      description.innerText = repo.description || "No description available";
 
       const link = document.createElement("a");
+      link.classList.add("repo-link");
       link.href = repo.html_url;
       link.target = "_blank";
       link.innerText = "View repository";
