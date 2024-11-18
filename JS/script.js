@@ -6,6 +6,7 @@ const openModals = document.querySelectorAll(".open-modal");
 const closeModals = document.querySelectorAll(".close-modal");
 const modals = document.querySelectorAll(".modal");
 const repoContainer = document.getElementById("repoContainer");
+const repoImages = ["../img/projecttile1.jpg"];
 
 toggleButton.addEventListener("click", () => {
   dropdownMenuList.classList.toggle("hidden");
@@ -24,6 +25,8 @@ closeModals.forEach((button, index) => {
   });
 });
 
+// Change these to Async/Await using documetation
+
 // Json fetch and display
 fetch("../data.json")
   .then((response) => {
@@ -33,7 +36,7 @@ fetch("../data.json")
     return response.json();
   })
   .then((data) => {
-    const aboutSections = document.querySelectorAll(".about-subsection");
+    const aboutSections = document.querySelectorAll(".work-subsection");
 
     aboutSections.forEach((section, index) => {
       if (data[index]) {
@@ -61,6 +64,11 @@ fetch(`https://api.github.com/users/${username}/repos`)
       const repoCard = document.createElement("div");
       repoCard.classList.add("repo-card");
 
+      const image = document.createElement("img");
+      image.src = repoImages[0];
+      image.alt = `${repo.name} image`;
+      image.classList.add("repo-image");
+
       const title = document.createElement("h2");
       title.classList.add("repo-title");
       title.innerText = repo.name;
@@ -78,6 +86,7 @@ fetch(`https://api.github.com/users/${username}/repos`)
       repoCard.appendChild(title);
       repoCard.appendChild(description);
       repoCard.appendChild(link);
+      repoCard.appendChild(image);
 
       repoContainer.appendChild(repoCard);
     });

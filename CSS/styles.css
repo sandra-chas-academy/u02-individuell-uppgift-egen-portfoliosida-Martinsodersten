@@ -22,7 +22,7 @@ body {
   background-color: var(--background-dark);
 }
 
-.about {
+.aboutme {
   grid-column: 1 / 2;
   grid-row: 2 / 4;
   display: flex;
@@ -91,7 +91,7 @@ body {
   border-radius: 8px;
 }
 
-.about,
+.aboutme,
 .work,
 .center,
 .projects,
@@ -109,27 +109,27 @@ body {
 
 /* ABOUT PAGE */
 
-.about-content {
+.work-content {
   display: flex;
   flex-direction: column;
   padding: 2vw;
   padding-top: 5rem;
 }
 
-.about-font {
+.work-font {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-color);
   margin-bottom: 2rem;
 }
 
-.about-section {
+.work-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.about-subsection {
+.work-subsection {
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -144,7 +144,7 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.about-subsection:hover {
+.work-subsection:hover {
   transform: scale(var(--hover-scale));
   background-color: var(--primary-color);
 }
@@ -305,11 +305,22 @@ footer {
   margin-top: 2vh;
 }
 
+.nav-logo {
+  font-size: 2vh;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /* PROJECTS PAGE */
 
 .projects-content {
   width: 100%;
   height: auto;
+}
+
+.projects-header {
+  margin: 3vw;
 }
 
 .repo-container {
@@ -318,21 +329,54 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 4vw;
+  gap: 4rem;
 }
 
 .repo-card {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  width: 300px;
   border: 1px solid var(--secondary-color);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(75, 85, 99, 0.8),
+    rgba(31, 41, 55, 0.8)
+  );
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  outline: transparent;
+}
+
+.repo-card:hover {
+  transform: scale(var(--hover-scale));
+  background-color: var(--primary-color);
+  outline: 1px solid var(--secondary-color);
 }
 .repo-title {
+  padding: 5px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 .repo-description {
+  padding: 5px;
   color: var(--text-color);
+}
+
+.repo-link {
+  padding: 5px;
+  color: var(--text-color);
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+.repo-image {
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  order: -1;
 }
