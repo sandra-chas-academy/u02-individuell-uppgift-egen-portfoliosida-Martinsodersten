@@ -25,8 +25,6 @@ closeModals.forEach((button, index) => {
   });
 });
 
-// Change these to Async/Await using documetation
-
 // Json fetch and display
 fetch("../data.json")
   .then((response) => {
