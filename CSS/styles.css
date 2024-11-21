@@ -265,6 +265,8 @@ body {
 }
 .modal {
   margin: auto;
+  width: 30%;
+  
 }
 
 .open-modal {

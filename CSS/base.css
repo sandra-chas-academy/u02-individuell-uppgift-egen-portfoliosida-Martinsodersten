@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #222831; /* Mjuk lila-blå färg */
-  --secondary-color: #22c55e; /* Ljusgrön accentfärg */
-  --background-dark: #1e293b; /* Mörk bakgrundsfärg */
-  --text-color: #f1f5f9; /* Ljus textfärg */
+  --primary-color: #222831; 
+  --secondary-color: #22c55e; 
+  --background-dark: #1e293b; 
+  --text-color: #f1f5f9; 
   --hover-scale: 1.03;
 }
 
@@ -60,5 +60,9 @@ body {
 
   .work-subsection {
     gap: 10px;
+  }
+
+  .modal {
+    width: 70%;
   }
 }
