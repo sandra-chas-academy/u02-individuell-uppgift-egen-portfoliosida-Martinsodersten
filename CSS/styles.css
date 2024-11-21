@@ -426,27 +426,37 @@ footer {
 /* Connect page */
 
 .main-connect {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
+  max-width: 90%;
+  margin: 3rem auto;
+  padding: 3rem;
   text-align: center;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #f0f0f0;
-  font-family: 'Poppins', sans-serif;
+}
+
+.connect-content, .connect-mail, .connect-phone {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .connect-content {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    rgba(75, 85, 99, 0.8),
+    rgba(31, 41, 55, 0.8)
+  );
+  border-radius: 8px;
+  
 }
 
 .connect-mail, .connect-phone {
-  font-size: 1rem;
+  font-size: 2rem;
   margin: 0.5rem 0;
   font-weight: 500;
+  color: var(--secondary-color);
 }
 
 .connect-link {
@@ -457,7 +467,12 @@ footer {
 
 .connect-img {
   width: 10vh;
+  &:hover {
+  transform: scale(var(--hover-scale));
+  }
 }
+
+
 
 .connect-icon {
   width: 40px;

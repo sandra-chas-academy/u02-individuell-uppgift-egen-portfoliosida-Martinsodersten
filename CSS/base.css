@@ -12,3 +12,53 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
+
+@media (max-width: 600px) {
+  .main-connect {
+    padding: 1rem;
+  }
+
+  .connect-content {
+    font-size: 1rem;
+  }
+
+  .connect-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .subsection-header {
+    font-size: 1rem;
+  }
+
+  .subsection-info {
+    flex-direction: column;
+    gap: 2px;
+    align-items: start;
+  }
+
+  .subsection-status {
+    padding: 1px;
+  }
+
+  .subsection-right {
+    padding: 4px;
+    gap: 5px;
+  }
+
+  .subsection-date {
+    font-size: 15px;
+  }
+
+  .open-modal {
+    padding: 2px;
+  }
+
+  .work-subsection {
+    gap: 10px;
+  }
+}
