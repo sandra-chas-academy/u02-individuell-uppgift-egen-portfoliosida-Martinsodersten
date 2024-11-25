@@ -49,12 +49,20 @@ Du svarar på dessa frågor (max 800 ord):
 Med hjälp av Javascript kan man skapa dynamiskt och interaktivt innehåll på frontend sidan. 
 
 Funktioner och applikationer som går att tillverka med hjälp av Javascript:
-- Dropdown menyer som expanderas eller kollapsar
+- Dropdown menyer som expanderar eller kollapsar
 - Det går att lägga till rörelse/animering med hjälp av Javascript som kopplas till CSS
 - Sliders som användare kan bläddra mellan för att se innehåll
-- 
+- Det går att hämta och via upp data via APIer som till exempel väder APIer för att visa väder på olika platser i världen
+- Todo listor och varukorgar där användaren kan lägga till, spara och ta bort saker
+
+Det finns mycket mer än så man kan använda Javascript till, det går även att kombinera Javascripten med olika bibliotek och ramverk för att bygga ännu större projekt. 
 
 2. Vad är JSON och hur används det inom frontend?
+
+JSON står för JavaScript Object Notation och är ett format för att lagra och transportera data. Med hjälp av JSON kan man lagra sin data som man sedan vill visa upp på sin hemsida för användaren. Liknande objekt så använder sig JSON av key value pairs, alltså en key och ett value vilket gör det enkelt och lätt att läsa. 
+
+Frontend appar hämtar JSON data från servrar med hjälp av Fetch-metoder.
+
 3. Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
 
