@@ -49,7 +49,7 @@ fetch("../data.json")
 
 const username = "Martinsodersten";
 
-// Fetching public repos github
+// Fetching and displaying public repos  from Github
 fetch(`https://api.github.com/users/${username}/repos`)
   .then((response) => {
     if (!response.ok) {

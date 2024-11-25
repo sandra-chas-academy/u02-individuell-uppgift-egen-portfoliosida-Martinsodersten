@@ -34,12 +34,28 @@ När hämtningen av projekten sker ska det finnas information om att projekten h
 
 ### Sammantfattning av projekt + teoretiska frågor
 
-1. Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
-2. Du svarar på dessa frågor (max 800 ord):
+Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
 
-Vad kan man utveckla m.h.a av Javascript inom frontend?
-Vad är JSON och hur används det inom frontend?
-Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
+Detta projektet var väldigt lärorikt för mig och jag var verkligen tvungen att tänka till några extra gånger för att få det att fungera på det sätt som jag ville. Mina styrkor i detta projektet är att jag tidigare har övat litegrann på fetch api, Json och modaler inom Javascript. Det kändes därför ganska simpelt när jag skulle göra det. Jag tycker att Javascripten är den roligaste delen inom programmeringen eftersom det är då man kan se att det verkligen händer något när man klickar osv. 
+
+Mina brister inom detta projektet är nog att jag kan ha ganska dåligt tålamod och vill bara att det ska fungera utan att jag vet hur det fungerar. Det som jag tycker är jobbigt och svårt ibland kan vara CSSen, jag vet hur CSS styling fungerar men jag tycker det tar alldeles för lång tid och det är för många beslut att ta. Något som även kan vara svårt är hur man ska strukturera sina koden och filerna, det är väl förmodligen en vanesak men kan tycka det är svårt att få till en simpel och bra struktur ibland. 
+
+Utöver det så har det flytit på ganska bra med projektet, jag kanske inte skulle ha gjort om hela portfolion från början bara för att spara lite tid. 
+
+Du svarar på dessa frågor (max 800 ord):
+
+1. Vad kan man utveckla m.h.a av Javascript inom frontend?
+
+Med hjälp av Javascript kan man skapa dynamiskt och interaktivt innehåll på frontend sidan. 
+
+Funktioner och applikationer som går att tillverka med hjälp av Javascript:
+- Dropdown menyer som expanderas eller kollapsar
+- Det går att lägga till rörelse/animering med hjälp av Javascript som kopplas till CSS
+- Sliders som användare kan bläddra mellan för att se innehåll
+- 
+
+2. Vad är JSON och hur används det inom frontend?
+3. Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
 
 ## Kriterier för bedömning
