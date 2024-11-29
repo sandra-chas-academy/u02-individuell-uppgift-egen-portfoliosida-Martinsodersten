@@ -6,7 +6,7 @@ const openModals = document.querySelectorAll(".open-modal");
 const closeModals = document.querySelectorAll(".close-modal");
 const modals = document.querySelectorAll(".modal");
 const repoContainer = document.getElementById("repoContainer");
-const repoImages = ["../img/projecttile1.jpg"];
+const repoImages = ["../img/minesweeper-img.png","../img/pig-game-img.png","../img/todo-img.png","../img/projecttile1.jpg"];
 
 toggleButton.addEventListener("click", () => {
   dropdownMenuList.classList.toggle("hidden");
@@ -58,12 +58,12 @@ fetch(`https://api.github.com/users/${username}/repos`)
     return response.json();
   })
   .then((repos) => {
-    repos.forEach((repo) => {
+    repos.forEach((repo, index) => {
       const repoCard = document.createElement("div");
       repoCard.classList.add("repo-card");
 
       const image = document.createElement("img");
-      image.src = repoImages[0];
+      image.src = repoImages[index];
       image.alt = `${repo.name} image`;
       image.classList.add("repo-image");
 

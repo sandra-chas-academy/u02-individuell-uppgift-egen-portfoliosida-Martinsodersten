@@ -266,7 +266,6 @@ body {
 .modal {
   margin: auto;
   width: 30%;
-  
 }
 
 .open-modal {
@@ -380,6 +379,10 @@ footer {
   border-radius: 8px 8px 0px 0px;
   display: flex;
   order: -1;
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+
 }
 
 /* ABOUT PAGE */
@@ -415,7 +418,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-
 .about-section p {
   max-width: 500px;
   font-family: "Poppins", sans-serif;
@@ -435,7 +437,9 @@ footer {
   color: #f0f0f0;
 }
 
-.connect-content, .connect-mail, .connect-phone {
+.connect-content,
+.connect-mail,
+.connect-phone {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
@@ -451,10 +455,10 @@ footer {
     rgba(31, 41, 55, 0.8)
   );
   border-radius: 8px;
-  
 }
 
-.connect-mail, .connect-phone {
+.connect-mail,
+.connect-phone {
   font-size: 2rem;
   margin: 0.5rem 0;
   font-weight: 500;
@@ -470,11 +474,9 @@ footer {
 .connect-img {
   width: 10vh;
   &:hover {
-  transform: scale(var(--hover-scale));
+    transform: scale(var(--hover-scale));
   }
 }
-
-
 
 .connect-icon {
   width: 40px;
